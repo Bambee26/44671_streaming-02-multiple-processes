@@ -19,7 +19,6 @@ When two processes attempt to write to a SQLite database at the same time, one w
 
 # Import from Python Standard Library
 
-
 import datetime
 import logging
 import multiprocessing
@@ -38,10 +37,9 @@ logging.basicConfig(
 
 # Declare program constants (typically constants are named with ALL_CAPS)
 
-TASK_DURATION_SECONDS = 1 # TODO: increase this to 3 and see what happens
+TASK_DURATION_SECONDS = 3 # TODO: increase this to 3 and see what happens
 DIVIDER = "=" * 70  # A string divider for cleaner output formatting
 DB_NAME = "shared.db"
-DB_LOCK = multiprocessing.Lock()
 
 # define a multi-line (doc) string to communicate with the user
 SUCCESS_MESSAGE ="""
@@ -92,17 +90,17 @@ def create_table():
     try:
         # create a connection to the database
         conn = sqlite3.connect(DB_NAME)
-        # logging.debug(f"  CREATED connection to {DB_NAME}.")
+        logging.debug(f"  CREATED connection to {DB_NAME}.")
 
         # create a connection cursor to execute statements
         cur = conn.cursor()
-        # logging.debug("  CREATED cursor.")
+        logging.debug("  CREATED cursor.")
 
         # create valid SQL statement
         sql_string = "  CREATE TABLE pets (id INTEGER PRIMARY KEY, name TEXT, breed TEXT)"
         # call cursor.execute() to run the SQL statement
         cur.execute(sql_string)
-        # logging.debug("  CREATED table pets.")
+        logging.debug("  CREATED table pets.")
 
         # commit the transaction
         conn.commit()
@@ -138,41 +136,30 @@ def insert_pet(process, name, breed):
         conn = sqlite3.connect(DB_NAME)
         cur = conn.cursor()
         sql = f"INSERT INTO pets (name, breed) VALUES ('{name}', '{breed}');"
-        retries = 3
-        while retries > 0:
-            try:
-                with DB_LOCK:
-                    cur.execute(sql)
-                    logging.debug(f"{process} getting ready to insert {name} the {breed}.")
-                    time.sleep(TASK_DURATION_SECONDS)
-                    conn.commit()
-                    logging.debug(f"{process} ADDED {name} the {breed}.")
-                    break
-            except sqlite3.Error as error:
-                if "database is locked" in str(error):
-                    logging.warning(f"Database is locked, retrying... ({retries} retries left)")
-                    retries -= 1
-                    time.sleep(0.1) #wait while retrying
-                else:
-                    logging.error(f"ERROR while {process} inserting pet {name}: {error}")
-                    break
+        logging.debug(f"{process} getting ready to insert {name} the {breed}.")
+        cur.execute(sql)
+        logging.debug(f"{process} ADDED {name} the {breed}.")
+        time.sleep(TASK_DURATION_SECONDS)
+        conn.commit()
+    except sqlite3.Error as error:
+        logging.error(f"ERROR while {process} inserting pet {name}: {error}")
     finally:
         conn.close()
 
 def process_one():
     logging.info("Called process_one().")
-    insert_pet("P1", "Ace", "Dog")
+    insert_pet("P1","Ace", "Dog")
     insert_pet("P1", "Buddy", "Dog")
 
 def process_two():
     logging.info("Called process_two().")
     insert_pet("P2", "Cooper", "Rabbit")
-    insert_pet("P2", "Dingo", "Dog")
+    insert_pet("P2","Dingo", "Dog")
 
 def process_three():
     logging.info("Called process_three().")
-    insert_pet("P3", "Emma", "Rabbit")
-    insert_pet("P3", "Felix", "Cat")
+    insert_pet("P3","Emma", "Rabbit")
+    insert_pet("P3","Felix", "Cat")
 
 
 # ---------------------------------------------------------------------------

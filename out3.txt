@@ -5,3 +5,32 @@ This will clear the console output.
 Run the file once while the tasks are longer. 
 
 Copy and paste the terminal results (when task_duration is 3) here.
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\popen_spawn_win32.py", line 112, in wait
+PS C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_2\44671_streaming-02-multiple-processes> & C:/Users/bambe/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/bambe/OneDrive/Documents/NMSU/44671_StreamingData/Module_2/44671_streaming-02-multiple-processes/multiple_processes.py
+2024-05-09 09:34:03,470 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-09 at 09:34 AM
+  Operating System: nt Windows 10
+  Python Version:   3.11.9
+  Path to Interpreter:  C:\Users\bambe\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+======================================================================
+
+2024-05-09 09:34:03,470 - INFO - Called recreate_database().
+2024-05-09 09:34:03,470 - INFO - Called drop_table().
+2024-05-09 09:34:03,476 - INFO - Table 'pets' dropped successfully.
+2024-05-09 09:34:03,477 - INFO - Called create_table().
+2024-05-09 09:34:03,482 - INFO - Table 'pets' created successfully.
+2024-05-09 09:34:03,621 - INFO - Called process_one().
+2024-05-09 09:34:03,621 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-09 09:34:03,659 - INFO - Called process_two().
+2024-05-09 09:34:03,660 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-09 09:34:03,692 - INFO - Called process_three().
+2024-05-09 09:34:03,693 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-09 09:34:06,629 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2024-05-09 09:34:09,303 - ERROR - ERROR while P3 inserting pet Emma: database is locked
+2024-05-09 09:34:09,304 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2024-05-09 09:34:09,319 - ERROR - ERROR while P2 inserting pet Cooper: database is locked
+2024-05-09 09:34:09,320 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+PS C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_2\44671_streaming-02-multiple-processes> 

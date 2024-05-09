@@ -5,3 +5,29 @@ This will clear the console output.
 Run the file once while the tasks are short. 
 
 Copy and paste the terminal results (when task_duration is 0) here.
+
+PS C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_2\44671_streaming-02-multiple-processes> & C:/Users/bambe/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/bambe/OneDrive/Documents/NMSU/44671_StreamingData/Module_2/44671_streaming-02-multiple-processes/multiple_processes.py
+2024-05-09 09:29:54,212 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-09 at 09:29 AM
+  Operating System: nt Windows 10
+  Python Version:   3.11.9
+  Path to Interpreter:  C:\Users\bambe\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+======================================================================
+
+2024-05-09 09:29:54,212 - INFO - Called recreate_database().
+2024-05-09 09:29:54,212 - INFO - Called drop_table().
+2024-05-09 09:29:54,216 - INFO - Table 'pets' dropped successfully.
+2024-05-09 09:29:54,217 - INFO - Called create_table().
+2024-05-09 09:29:54,222 - INFO - Table 'pets' created successfully.
+2024-05-09 09:29:54,377 - INFO - Called process_one().
+2024-05-09 09:29:54,377 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-09 09:29:54,401 - INFO - Called process_two().
+2024-05-09 09:29:54,401 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-09 09:29:54,448 - INFO - Called process_three().
+2024-05-09 09:29:54,448 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-09 09:29:55,384 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2024-05-09 09:29:57,404 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2024-05-09 09:29:59,448 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+PS C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_2\44671_streaming-02-multiple-processes> 

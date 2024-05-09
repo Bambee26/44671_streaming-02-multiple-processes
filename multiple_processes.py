@@ -19,8 +19,7 @@ When two processes attempt to write to a SQLite database at the same time, one w
 
 # Import from Python Standard Library
 
-import csv
-import socket
+
 import datetime
 import logging
 import multiprocessing
@@ -39,7 +38,7 @@ logging.basicConfig(
 
 # Declare program constants (typically constants are named with ALL_CAPS)
 
-TASK_DURATION_SECONDS = 3 # TODO: increase this to 3 and see what happens
+TASK_DURATION_SECONDS = 1 # TODO: increase this to 3 and see what happens
 DIVIDER = "=" * 70  # A string divider for cleaner output formatting
 DB_NAME = "shared.db"
 DB_LOCK = multiprocessing.Lock()

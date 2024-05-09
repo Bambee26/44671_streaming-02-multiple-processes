@@ -1,0 +1,25 @@
+
+======================================================================
+======================================================================
+ Welcome to NW Diagnostics!
+ At: 2024-05-09 at 08:56 AM
+ Operating System: nt Windows 10
+ System Architecture: 64bit
+ Number of CPUs: 12
+ Machine Type: AMD64
+ Python Version: 3.11.9
+ Python Build Date and Compiler: tags/v3.11.9:de54cf5 with Apr  2 2024 10:12:12
+ Python Implementation: CPython
+ Active pip environment: None
+ Path to Interpreter:         C:\Users\bambe\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+ Path to virtual environment: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0
+ Current Working Directory:   C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_2\44671_streaming-02-multiple-processes
+ Path to source directory:    c:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_2\44671_streaming-02-multiple-processes
+ Path to script file:         c:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_2\44671_streaming-02-multiple-processes\00_check_core.py
+ User's Home Directory:       C:\Users\bambe
+ Terminal Environment:        VS Code
+ Terminal Type:               cmd.exe
+ Git available in PATH:       True 
+======================================================================
+======================================================================
+

@@ -1,0 +1,27 @@
+2024-05-10 20:04:05,439 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-10 at 08:04 PM
+  Operating System: nt Windows 10
+  Python Version:   3.11.9
+  Path to Interpreter:  C:\Users\bambe\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+======================================================================
+
+2024-05-10 20:04:05,439 - INFO - Called recreate_database().
+2024-05-10 20:04:05,439 - INFO - Called drop_table().
+2024-05-10 20:04:05,440 - INFO - Table 'customers' dropped successfully.
+2024-05-10 20:04:05,440 - INFO - Called create_table().
+2024-05-10 20:04:05,446 - INFO - Table 'customers' created successfully.
+2024-05-10 20:04:05,819 - INFO - Called process_csv_data().
+2024-05-10 20:04:05,841 - INFO -   Called insert_customer() with process=CSV_1, first_name=Sheryl, last_name=Baxter, city=East Leonard, country=Chile.
+2024-05-10 20:04:06,888 - INFO -   Called insert_customer() with process=CSV_2, first_name=Preston, last_name=Lozano, city=East Jimmychester, country=Djibouti.
+2024-05-10 20:04:07,932 - INFO -   Called insert_customer() with process=CSV_3, first_name=Roy, last_name=Berry, city=Isabelborough, country=Antigua and Barbuda.
+2024-05-10 20:04:08,978 - INFO -   Called insert_customer() with process=CSV_4, first_name=Linda, last_name=Olsen, city=Bensonview, country=Dominican Republic.
+2024-05-10 20:04:10,052 - INFO -   Called insert_customer() with process=CSV_5, first_name=Joanna, last_name=Bender, city=West Priscilla, country=Slovakia (Slovak Republic).
+2024-05-10 20:04:11,099 - INFO -   Called insert_customer() with process=CSV_6, first_name=Aimee, last_name=Downs, city=Chavezborough, country=Bosnia and Herzegovina.
+2024-05-10 20:04:12,149 - INFO -   Called insert_customer() with process=CSV_7, first_name=Darren, last_name=Peck, city=Lake Ana, country=Pitcairn Islands.
+2024-05-10 20:04:13,193 - INFO -   Called insert_customer() with process=CSV_8, first_name=Brett, last_name=Mullen, city=Kimport, country=Bulgaria.
+2024-05-10 20:04:14,246 - INFO -   Called insert_customer() with process=CSV_9, first_name=Sheryl, last_name=Meyers, city=Robersonstad, country=Cyprus.
+2024-05-10 20:04:15,257 - INFO -   Called insert_customer() with process=CSV_10, first_name=Michelle, last_name=Gallagher, city=Elaineberg, country=Timor-Leste.
+2024-05-10 20:04:16,302 - INFO -   Called insert_customer() with process=CSV_11, first_name=Carl, last_name=Schroeder, city=Shannonville, country=Guernsey.
+2024-05-10 20:04:17,345 - INFO -   Called insert_customer() with process=CSV_12, first_name=Jenna, last_name=Dodson, city=East Andrea, country=Vietnam.
